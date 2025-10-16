@@ -276,9 +276,7 @@ Aplicación en desarrollo que usa visión por computadora para diagnosticar enfe
                           <a href="https://github.com/laura2444/Portafolio.git" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light btn-sm">
                             <FontAwesomeIcon icon={faGithub} size="2x" /> código
                           </a>
-                          <a href="https://portafolio-chi-ivory.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">
-                            ver proyecto
-                          </a>
+                          
                         </div>
 
                       </div>
