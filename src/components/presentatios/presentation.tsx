@@ -7,7 +7,7 @@ import "./presentation.css"
 const Presentation: React.FC = () => {
   const handleDownloadCV = () => {
     // Ruta del PDF en tu carpeta public o assets
-    const pdfPath = "images/curriculum ATS.pdf";
+    const pdfPath = "images/Laura_Castaño_CV.pdf";
     
     // Crear un elemento <a> temporal
     const link = document.createElement("a");
