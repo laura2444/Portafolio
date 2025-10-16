@@ -64,21 +64,21 @@
 }
 
 .profile-image.normal {
-  opacity: 1;
+  opacity: 0;
   z-index: 1;
 }
 
 .profile-image.pixelated {
-  opacity: 0;
+  opacity: 1;
   z-index: 2;
 }
 
 .profile-image-container:hover .normal {
-  opacity: 0;
+  opacity: 1;
 }
 
 .profile-image-container:hover .pixelated {
-  opacity: 1;
+  opacity: 0;
 }
 
 

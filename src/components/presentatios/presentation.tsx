@@ -60,15 +60,16 @@ const Presentation: React.FC = () => {
             <div className="col-lg-6 col-md-5 d-flex justify-content-end justify-content-md-end justify-content-center mb-4 mb-md-0 order-1 order-md-2">
               <div className="profile-image-container">
                 <img
-                  src="src/assets/images/foto1 (4).jpg"
-                  alt="Profile"
-                  className="profile-image normal"
-                />
-                <img
                   src="src/assets/icons/pixel2.png"
                   alt="Profile Pixelado"
                   className="profile-image pixelated"
                 />
+                <img
+                  src="src/assets/images/foto1 (4).jpg"
+                  alt="Profile"
+                  className="profile-image normal"
+                />
+                
               </div>
             </div>
 
