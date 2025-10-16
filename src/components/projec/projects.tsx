@@ -13,7 +13,6 @@ import {
   FaBootstrap,
   FaNodeJs,
   FaReact,
-  FaAngular
 } from "react-icons/fa";
 import {
   SiTypescript,
