@@ -13,7 +13,7 @@ const Logros: React.FC = () => {
           <div className="col-md-6 col-lg-4">
             <div className="card text-bg-dark custom-cards">
               <img
-                src="src/assets/images/todosytodas.jpg"
+                src="images/todosytodas.jpg"
                 className="card-img"
                 alt="Educación"
               />
@@ -28,7 +28,7 @@ Beca “Todos y Todas a Estudiar”, programa de la Alcaldía de cali en conveni
           <div className="col-md-6 col-lg-4">
             <div className="card text-bg-dark custom-cards">
               <img
-                src="src/assets/images/becaExcelencia.jpeg"
+                src="images/becaExcelencia.jpeg"
                 className="card-img"
                 alt="Educación"
               />
@@ -44,7 +44,7 @@ Beca “Todos y Todas a Estudiar”, programa de la Alcaldía de cali en conveni
                     <div className="col-md-6 col-lg-4">
             <div className="card text-bg-dark custom-cards">
               <img
-                src="src/assets/images/hackaton-Photoroom.png"
+                src="images/hackaton-Photoroom.png"
                 className="card-img"
                 alt="Educación"
               />

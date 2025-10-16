@@ -61,7 +61,7 @@ const Projects: React.FC = () => {
                 <div className="col-md-6 col-lg-4">
                     <div className="card card-one h-100 shadow-sm">
                       <img
-                        src="src\assets\images\Hero.png"
+                        src="images\Hero.png"
                         alt="HeroeVerso"
                         className="card-img-top"
                       />
@@ -115,7 +115,7 @@ const Projects: React.FC = () => {
                   <div className="col-md-6 col-lg-4">
                     <div className="card card-one h-100 shadow-sm">
                       <img
-                        src="src/assets/images/request.png"
+                        src="images/request.png"
                         alt="Request"
                         className="card-img-top"
                       />
@@ -155,7 +155,7 @@ const Projects: React.FC = () => {
                   <div className="col-md-6 col-lg-4">
                     <div className="card card-one h-100 shadow-sm">
                       <img
-                        src="src/assets/images/productivity.png"
+                        src="images/productivity.png"
                         alt="Productivity"
                         className="card-img-top"
                       />
@@ -207,7 +207,7 @@ const Projects: React.FC = () => {
                   <div className="col-md-6 col-lg-4">
                     <div className="card card-one h-100 shadow-sm">
                       <img
-                        src="src/assets/images/GUYP-arreglado.png"
+                        src="images/GUYP-arreglado.png"
                         alt="Task Management App"
                         className="card-img-top"
                       />
@@ -249,7 +249,7 @@ Aplicación en desarrollo que usa visión por computadora para diagnosticar enfe
                    <div className="col-md-6 col-lg-4">
                     <div className="card card-one h-100 shadow-sm">
                       <img
-                        src="src\assets\images\Miportafolio.png"
+                        src="images\Miportafolio.png"
                         alt="Task Management App"
                         className="card-img-top"
                       />
@@ -276,7 +276,7 @@ Aplicación en desarrollo que usa visión por computadora para diagnosticar enfe
                           <a href="https://github.com/laura2444/Portafolio.git" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light btn-sm">
                             <FontAwesomeIcon icon={faGithub} size="2x" /> código
                           </a>
-                          <a href="" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">
+                          <a href="https://portafolio-chi-ivory.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">
                             ver proyecto
                           </a>
                         </div>

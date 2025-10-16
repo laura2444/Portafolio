@@ -23,7 +23,7 @@ const Nav: React.FC = () => {
     <nav className={`navbar navbar-expand-md navbar-dark fixed-top personalized-nav ${scrolled ? "scrolled" : ""}`}>
       <div className="container">
         <a className="navbar-brand d-flex align-items-center gap-2" href="#hero">
-          <img src="src/assets/icons/pixel2.png" alt="Logo" width="30" height="30" className="pixel" />
+          <img src="images/pixel2.png" alt="Logo" width="30" height="30" className="pixel" />
           <span className="brand-text">Laura</span>
         </a>
 

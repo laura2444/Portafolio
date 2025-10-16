@@ -85,7 +85,7 @@ const About: React.FC = () => {
                         <div className="carousel-item active">
                           <div className="card text-bg-dark custom-card">
                             <img
-                              src="src\assets\images\me-programming.jpeg"
+                              src="images/me-programming.jpeg"
                               className="card-img"
                               alt="img1"
                             />
@@ -101,7 +101,7 @@ const About: React.FC = () => {
                         <div className="carousel-item">
                           <div className="card text-bg-dark custom-card">
                             <img
-                              src="src\assets\images\sushi.jpeg"
+                              src="images\sushi.jpeg"
                               className="card-img"
                               alt="img2"
                             />
@@ -118,7 +118,7 @@ const About: React.FC = () => {
                          <div className="carousel-item">
                           <div className="card text-bg-dark custom-card">
                             <img
-                              src="src\assets\images\bambi.jpeg"
+                              src="images/bambi.jpeg"
                               className="card-img"
                               alt="img2"
                             />
@@ -134,7 +134,7 @@ const About: React.FC = () => {
                         <div className="carousel-item">
                           <div className="card text-bg-dark custom-card">
                             <img
-                              src="src\assets\images\movie.jpg"
+                              src="images/movie.jpg"
                               className="card-img"
                               alt="img2"
                             />

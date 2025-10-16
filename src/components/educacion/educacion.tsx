@@ -13,7 +13,7 @@ const Educacion: React.FC = () => {
           <div className="col-md-6 col-lg-4">
             <div className="card text-bg-dark custom-card">
               <img
-                src="src\assets\images\universidad_sanBuenaventura.jpg"
+                src="images\universidad_sanBuenaventura.jpg"
                 className="card-img"
                 alt="Educación"
               />
@@ -29,7 +29,7 @@ const Educacion: React.FC = () => {
           <div className="col-md-6 col-lg-4">
             <div className="card text-bg-dark custom-card">
               <img
-                src="src\assets\images\fortinet.png"
+                src="images\fortinet.png"
                 className="card-img"
                 alt="Educación"
               />
@@ -45,7 +45,7 @@ const Educacion: React.FC = () => {
           <div className="col-md-6 col-lg-4">
             <div className="card text-bg-dark custom-card">
               <img
-                src="src\assets\images\cisco_redes.png"
+                src="images\cisco_redes.png"
                 className="card-img"
                 alt="Educación"
               />
@@ -61,7 +61,7 @@ const Educacion: React.FC = () => {
           <div className="col-md-6 col-lg-4">
             <div className="card text-bg-dark custom-card">
               <img
-                src="src\assets\images\cisco_ciberseguridad.png"
+                src="images\cisco_ciberseguridad.png"
                 className="card-img"
                 alt="Educación"
               />
@@ -77,7 +77,7 @@ const Educacion: React.FC = () => {
           <div className="col-md-6 col-lg-4">
             <div className="card text-bg-dark custom-card">
               <img
-                src="src\assets\images\springboot.png"
+                src="images\springboot.png"
                 className="card-img"
                 alt="Educación"
               />
@@ -93,7 +93,7 @@ const Educacion: React.FC = () => {
           <div className="col-md-6 col-lg-4">
             <div className="card text-bg-dark custom-card">
               <img
-                src="src\assets\images\JavaScript.png"
+                src="images\JavaScript.png"
                 className="card-img"
                 alt="Educación"
               />
@@ -109,7 +109,7 @@ const Educacion: React.FC = () => {
           <div className="col-md-6 col-lg-4">
             <div className="card text-bg-dark custom-card">
               <img
-                src="src\assets\images\platzi_java.png"
+                src="images\platzi_java.png"
                 className="card-img"
                 alt="Educación"
               />
@@ -125,7 +125,7 @@ const Educacion: React.FC = () => {
           <div className="col-md-6 col-lg-4">
             <div className="card text-bg-dark custom-card">
               <img
-                src="src\assets\images\mintic-Photoroom.png"
+                src="images\mintic-Photoroom.png"
                 className="card-img"
                 alt="Educación"
               />
@@ -141,7 +141,7 @@ const Educacion: React.FC = () => {
           <div className="col-md-6 col-lg-4">
             <div className="card text-bg-dark custom-card">
               <img
-                src="src\assets\images\python-Photoroom.png"
+                src="images\python-Photoroom.png"
                 className="card-img"
                 alt="Educación"
               />
