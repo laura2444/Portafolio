@@ -273,7 +273,7 @@ Aplicación en desarrollo que usa visión por computadora para diagnosticar enfe
                       
                         </div>
                         <div className="d-flex gap-2">
-                          <a href="" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light btn-sm">
+                          <a href="https://github.com/laura2444/Portafolio.git" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light btn-sm">
                             <FontAwesomeIcon icon={faGithub} size="2x" /> código
                           </a>
                           <a href="" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">
