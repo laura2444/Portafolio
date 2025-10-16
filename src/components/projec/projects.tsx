@@ -52,7 +52,7 @@ const Projects: React.FC = () => {
       technologies: [
         { Icon: SiJavascript, color: "#F7DF1E", name: "JavaScript" },
         { Icon: FaNodeJs, color: "#68A063", name: "Node.js" },
-        { Icon: FaAngular, color: "#F7DF1E", name: "Angular" },
+        { Icon: SiAngular, color: "#f71e1eff", name: "Angular" },
         { Icon: SiMongodb, color: "#47A248", name: "MongoDB" },
         { Icon: FaBootstrap, color: "#7952B3", name: "Bootstrap" },
         { Icon: SiTypescript, color: "#3178C6", name: "TypeScript" }
@@ -79,7 +79,7 @@ const Projects: React.FC = () => {
       technologies: [
         { Icon: SiIonic, color: "#000000", name: "Ionic" },
         { Icon: SiTypescript, color: "#3178C6", name: "TypeScript" },
-        { Icon: SiAngular, color: "#5469D4", name: "Angular" }
+        { Icon: SiAngular, color: "#f71e1eff", name: "Angular" }
       ],
       github: "https://github.com/laura2444/productivity2.git",
       demo: "https://laura2444.github.io/PresentationProductivity/"
