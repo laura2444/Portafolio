@@ -105,7 +105,6 @@ const Projects: React.FC = () => {
         { Icon: SiTypescript, color: "#68A063", name: "Typescript" },
         { Icon: FaBootstrap, color: "#47A248", name: "Bootstrap" }
       ],
-      github: "https://github.com/laura2444/Portafolio.git"
     }
   ];
 
