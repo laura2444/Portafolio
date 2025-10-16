@@ -1,0 +1,157 @@
+/* about.css - Versión limpia y corregida */
+
+/* Contenedor principal */
+.about-full-width {
+       background: #18151e;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Título con efectos */
+.title-container {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+blockquote {
+  margin-top: 2rem;
+  margin-bottom: 3rem; /* más espacio abajo */  ;
+  text-align: justify; /* Justificado */
+  position: relative;
+}
+
+blockquote footer {
+  display: block;
+  margin-top: 0.8rem; /* espacio entre la frase y “Interstellar” */
+  font-size: 0.9rem;
+  color: #aaa; /* más sutil */
+  text-align: right; /* se ve más elegante alineado a la derecha */
+}
+
+
+.parrafo{
+    text-align: justify ;
+}
+
+.titulosobre {
+    color: #f59e0b;
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.2;
+    text-align: center;
+    position: relative;
+}
+
+/* Sección de redes sociales */
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #c9c9c9;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    font-weight: 500;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.github-btn:hover {
+    background: rgba(36, 41, 47, 0.8);
+    border-color: #24292f;
+    box-shadow: 0 10px 30px rgba(36, 41, 47, 0.4);
+}
+
+.linkedin-btn:hover {
+    background: rgba(10, 102, 194, 0.8);
+    border-color: #0a66c2;
+    box-shadow: 0 10px 30px rgba(10, 102, 194, 0.4);
+}
+
+.email-btn:hover {
+    background: rgba(245, 158, 11, 0.8);
+    border-color: #f59e0b;
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
+}
+
+.social-btn svg {
+    font-size: 1.3rem;
+}
+
+/* Contenedor del carrusel - SOLUCIÓN PARA LAS FLECHAS */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Forzar que las flechas se mantengan dentro del carrusel */
+#aboutCarousel .carousel-control-prev {
+    left: 0;
+    right: auto;
+    width: 48px;
+}
+
+#aboutCarousel .carousel-control-next {
+    right: 0;
+    left: auto;
+    width: 48px;
+}
+
+/* Asegurar que la columna de contacto tenga prioridad */
+.col-md-4 {
+    position: relative;
+    z-index: 10;
+}
+
+.col-md-8 {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .social-btn {
+        width: 150px;
+            justify-content: center;
+    }
+
+    .parrafo{
+        font-size: 1.1rem;
+    }
+    
+    #aboutCarousel .carousel-control-prev,
+    #aboutCarousel .carousel-control-next {
+        width: 20px;
+    }
+
+
+
+    .titulosobre{
+        font-size: 2.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .title-container {
+        margin-bottom: 2rem;
+    }
+    
+ 
+} 
+
+
+
+
+#aboutCarousel .card {
+    border: none !important;
+    background: #0a66c2;
+}
+

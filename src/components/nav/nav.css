@@ -1,0 +1,146 @@
+.personalized-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #18151e; /* similar al fondo de referencia */
+}
+
+.personalized-nav .navbar-nav {
+    display: flex;
+    gap: 1.0rem; /* separa los enlaces */
+    list-style: none;
+}
+
+.personalized-nav .navbar-nav .nav-item .nav-link {
+    color: #ffffff;
+    font-weight: 200;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.personalized-nav .navbar-nav .nav-item .nav-link:hover {
+    background-color: #f59e0b;
+    color: #040404;
+    border-radius: 6px;
+    padding: 0.3rem 0.10rem;
+}
+
+/* Logo "Laura" */
+.brand-text {
+    color: #f59e0b;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+/* Imagen pixelada cuadrada */
+.pixel {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 8px;
+    /*cuadradoconesquinassuavizadas*/border: 2px solid #f59e0b;
+    /*opcional: borde */;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+
+.personalized-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0rem; /* por defecto en pantallas grandes */
+}
+
+/* Ajustes responsive */
+@media (max-width: 1200px) {
+  .personalized-nav {
+    padding: 2rem 2rem; /* reduce el padding lateral */
+  }
+}
+
+@media (max-width: 992px) {
+  .personalized-nav {
+    padding: 1.5rem 2rem; /* aún más reducido */
+  }
+}
+
+@media (max-width: 768px) {
+  .personalized-nav {
+    padding: 1.5rem 2rem; /* en tablets y móviles */
+  }
+}
+
+.personalized-nav {
+  background-color: rgba(24, 21, 30, 0); /* ya no es 100% transparente */
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.personalized-nav.scrolled {
+  background-color: rgba(24, 21, 30, 0.6); /* en vez de 0.7 para más sutil */
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Transiciones suaves para el colapso del menú */
+.navbar-collapse {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Menú móvil compacto y a la derecha */
+@media (max-width: 767px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    width: auto;
+    min-width: 200px;
+    background-color: rgba(24, 21, 30, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  /* Animación de entrada */
+  .navbar-collapse.collapsing {
+    transition: height 0.25s ease, opacity 0.25s ease;
+  }
+
+  .navbar-collapse:not(.show) {
+    display: none;
+  }
+
+  /* Items más pequeños y compactos */
+  .personalized-nav .navbar-nav {
+    gap: 0.25rem;
+  }
+
+  .personalized-nav .navbar-nav .nav-item {
+    margin: 0;
+  }
+
+  .personalized-nav .navbar-nav .nav-item .nav-link {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.75rem;
+    display: block;
+    text-align: right;
+    transition: all 0.15s ease;
+  }
+
+  .personalized-nav .navbar-nav .nav-item .nav-link:hover {
+    padding: 0.5rem 0.75rem;
+  }
+
+  /* Eliminar el margen derecho de los items en móvil */
+  .personalized-nav .navbar-nav .nav-item.me-4 {
+    margin-right: 0 !important;
+  }
+}

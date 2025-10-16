@@ -1,0 +1,205 @@
+/* skills.css */
+
+/* Estilos para el componente skill-item */
+
+#skills{
+    background-color: #ccbbcc;
+
+  
+  }
+
+  
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.skill-item:hover {
+
+  transform: translateY(-5px);
+}
+
+.skill-item small {
+  font-weight: 500;
+  color: #d7dfe9;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+}
+
+
+/* Estilos para el carrusel */
+.carousel {
+  position: relative;
+}
+
+
+
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+/* Iconos de control más pequeños y estilizados */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-size: 20px 20px;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #a8b1b8;
+  opacity: 0.5;
+}
+
+.carousel-indicators .active {
+  background-color: #0d6efd;
+  opacity: 1;
+}
+
+/* Espaciado para el carrusel */
+.carousel-inner {
+  padding: 2rem 0;
+}
+
+/* Contenedor del carrusel con padding lateral para las flechas */
+.carousel {
+  position: relative;
+  padding: 0 80px; /* Espacio para las flechas externas */
+}
+
+/* En pantallas pequeñas, mover las flechas adentro */
+@media (max-width: 992px) {
+  .carousel {
+    padding: 0;
+  }
+  
+  .carousel-control-prev {
+    left: 10px;
+  }
+  
+  .carousel-control-next {
+    right: 10px;
+  }
+}
+
+/* Responsive: En pantallas pequeñas mostrar 1 card por slide */
+@media (max-width: 768px) {
+  /* Título más pequeño en móviles */
+  .tituloabout {
+    font-size: 2.3rem !important;
+  }
+  
+  .carousel-item .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  /* Ocultar las otras cards en móvil */
+  .carousel-item .row .col-md-4:nth-child(2),
+  .carousel-item .row .col-md-4:nth-child(3) {
+    display: none;
+  }
+  
+  /* Ajustar grid de skills para móviles - 2 columnas en lugar de 3 */
+  .skill-item {
+    padding: 0rem;
+  }
+  
+  .skill-item small {
+    font-size: 0.75rem;
+    line-height: 1.2;
+    text-align: center;
+    word-wrap: break-word;
+  }
+  
+  /* Reducir tamaño de iconos en móvil */
+  .skill-item svg {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .skill-item img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+
+/* En tablets mostrar 2 cards */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Título un poco más pequeño en tablets */
+  .tituloabout {
+    font-size: 2.3rem !important;
+    
+  }
+  
+  .carousel-item .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  .carousel-item .row .col-md-4:nth-child(3) {
+    display: none;
+  }
+  
+  /* Mantener 3 columnas pero con menos padding */
+  .skill-item {
+    padding: 0.75rem;
+  }
+  
+  .skill-item small {
+    font-size: 0.8rem;
+  }
+}
+
+
+.skills-title {
+    color: #fbbf24; /* El dorado se ve genial en grises medios */
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1); /* Cards más claras */
+}
+
+#skills {
+    background: #18151e; /* Fondo claro con tinte morado sutil */
+}
+
+.skills-title {
+    /* Gradiente que une ambos colores de tu paleta */
+    background: linear-gradient(135deg, #f59e0b, #A855F7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.tituloabout{
+    color: #f59e0b;
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.2;
+    text-align: center;
+    position: relative;
+
+}
+
+.card-header{
+  color: #d7dfe9;
+}

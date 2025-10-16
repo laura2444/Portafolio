@@ -1,0 +1,311 @@
+#projects {
+    background: #18151e;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow-x: hidden;
+}
+
+/* Asegurar que el contenido interno mantenga el padding */
+#projects .container {
+    padding-left: 1rem;
+    padding-right: 3rem;
+}
+
+/* Todas las cards con altura fija */
+#projects .card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+#projects .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+}
+
+/* Hacer que la descripción ocupe el espacio disponible */
+#projects .card-text {
+    flex-grow: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    padding: 0.5rem 0;
+    text-align: justify;
+}
+
+/* Mantener los botones al final */
+#projects .card-body > .d-flex {
+    margin-top: auto;
+}
+
+.card-one {
+    color: #d7dfe9;
+}
+
+p.card-text.text-muted {
+    color: #d7dfe9;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+/* Título con altura fija */
+#projects .card-title {
+    min-height: 3rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: #ffffff !important;
+}
+
+/* Contenedor de iconos de tecnología */
+.tech-icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1.2rem 0;
+    min-height: 4rem;
+}
+
+/* Cada item de tecnología */
+.tech-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    padding: 0.4rem 0.6rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.tech-icon-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.tech-icon-name {
+    font-size: 0.6rem;
+    font-weight: 500;
+    color: #d7dfe9;
+    text-align: center;
+    white-space: nowrap;
+    max-width: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Estilos para el carrusel */
+#projects .carousel {
+    position: relative;
+    padding: 0 60px;
+}
+
+/* Controles del carrusel dentro pero en los bordes */
+#projects .carousel-control-prev,
+#projects .carousel-control-next {
+    width: 50px;
+    opacity: 0.8;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 60px;
+    z-index: 10;
+}
+
+#projects .carousel-control-prev {
+    left: 0;
+}
+
+#projects .carousel-control-next {
+    right: 0;
+}
+
+#projects .carousel-control-prev:hover,
+#projects .carousel-control-next:hover {
+    opacity: 1;
+}
+
+/* Iconos de control más pequeños y estilizados */
+#projects .carousel-control-prev-icon,
+#projects .carousel-control-next-icon {
+    background-color: #f59e0b;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    background-size: 22px 22px;
+}
+
+/* Indicadores del carrusel */
+#projects .carousel-indicators {
+    margin-bottom: -2rem;
+}
+
+#projects .carousel-indicators [data-bs-target] {
+    background-color: #a8b1b8;
+    opacity: 0.5;
+}
+
+#projects .carousel-indicators .active {
+    background-color: #0d6efd;
+    opacity: 1;
+}
+
+/* Espaciado para el carrusel */
+#projects .carousel-inner {
+    padding: 2rem 0;
+}
+
+/* Responsive: ajustar padding en móviles */
+@media (max-width: 768px) {
+    #projects .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    
+    .card-img-top {
+        height: 200px;
+    }
+
+    #projects .card-title {
+        min-height: 2.5rem;
+    }
+
+    #projects .card-body {
+        padding: 1rem 0.75rem !important;
+    }
+
+    #projects .card-text {
+        padding: 0.3rem 0;
+        font-size: 0.9rem;
+        -webkit-line-clamp: 4;
+    }
+
+    .tech-icons-container {
+        min-height: auto;
+        margin: 1rem 0;
+        gap: 0.3rem;
+    }
+
+    .tech-icon-item {
+        padding: 0.20rem 0.25rem;
+        gap: 0.1rem;
+    }
+
+    .tech-icon-name {
+        font-size: 0.35rem;
+        max-width: 35px;
+    }
+
+    #projects .carousel {
+        padding: 0;
+    }
+    
+    #projects .carousel-control-prev {
+        left: 0px;
+    }
+    
+    #projects .carousel-control-next {
+        right: 0px;
+    }
+
+    #projects .carousel-control-prev,
+    #projects .carousel-control-next {
+        width: 20px;
+    }
+
+    #projects .carousel-control-prev-icon,
+    #projects .carousel-control-next-icon {
+        width: 35px;
+        height: 35px;
+        background-size: 18px 18px;
+    }
+
+    /* Mostrar 1 card por slide en móviles */
+    #projects .carousel-item .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    #projects .carousel-item .row .col-lg-4:nth-child(2),
+    #projects .carousel-item .row .col-lg-4:nth-child(3) {
+        display: none;
+    }
+}
+
+/* Responsive: ajustar padding en tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #projects .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    
+    .card-img-top {
+        height: 220px;
+    }
+
+    #projects .carousel {
+        padding: 0 50px;
+    }
+
+    #projects .carousel-control-prev {
+        left: 5px;
+    }
+    
+    #projects .carousel-control-next {
+        right: 5px;
+    }
+
+    /* Mostrar 2 cards por slide en tablets */
+    #projects .carousel-item .col-lg-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    #projects .carousel-item .row .col-lg-4:nth-child(3) {
+        display: none;
+    }
+}
+
+.badge-dev {
+  background: linear-gradient(135deg, #2f3024, #8d8515);
+  color: #ffffff;
+  font-weight: 500;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Botones "ver proyecto" amarillos */
+#projects .btn-primary {
+  background-color: #f59e0b; /* amarillo tipo IMDb */
+  border: none;
+  color: #000;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+#projects .btn-primary:hover {
+  background-color: #ffdd33;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(255, 221, 51, 0.5);
+}
