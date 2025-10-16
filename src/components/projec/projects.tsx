@@ -12,7 +12,8 @@ import {
   FaNetworkWired,
   FaBootstrap,
   FaNodeJs,
-  FaReact
+  FaReact,
+  FaAngular
 } from "react-icons/fa";
 import {
   SiTypescript,
@@ -51,7 +52,7 @@ const Projects: React.FC = () => {
       technologies: [
         { Icon: SiJavascript, color: "#F7DF1E", name: "JavaScript" },
         { Icon: FaNodeJs, color: "#68A063", name: "Node.js" },
-        { Icon: FaRobot, color: "#F7DF1E", name: "Angular" },
+        { Icon: FaAngular, color: "#F7DF1E", name: "Angular" },
         { Icon: SiMongodb, color: "#47A248", name: "MongoDB" },
         { Icon: FaBootstrap, color: "#7952B3", name: "Bootstrap" },
         { Icon: SiTypescript, color: "#3178C6", name: "TypeScript" }
