@@ -29,7 +29,7 @@ const About: React.FC = () => {
                   oportunidad para inspirarme y descubrir cosas nuevas, por eso me gusta explorar tecnologías web y móviles
                    como FastAPI, React, MongoDB, Flutter, Node.js y Angular. Me considero una persona tranquila, pero disfruto
                     asumir retos y probar cosas diferentes. Soy curiosa, comprometida y siempre dispuesta a aprender y aportar 
-                      en cada proyecto.
+                      en cada proyecto..
               </p>
 
               {/* Frase */}
