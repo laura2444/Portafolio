@@ -7,12 +7,12 @@ import "./presentation.css"
 const Presentation: React.FC = () => {
   const handleDownloadCV = () => {
     // Ruta del PDF en tu carpeta public o assets
-    const pdfPath = "images/Laura_Castaño_CV.pdf";
+    const pdfPath = "images/Laura-Castaño-CV.pdf";
     
     // Crear un elemento <a> temporal
     const link = document.createElement("a");
     link.href = pdfPath;
-    link.download = "Laura_Castaño_CV.pdf"; // Nombre del archivo descargado
+    link.download = "Laura-Castaño-CV.pdf"; // Nombre del archivo descargado
     
     // Agregar al DOM, hacer click y remover
     document.body.appendChild(link);
@@ -39,7 +39,7 @@ const Presentation: React.FC = () => {
               </h1>
 
               <p className="mb-5">
-                <span className="hero-subtittle">Estudiante Ingeniera de software</span>
+                <span className="hero-subtittle">Ingeniera de sistemas</span>
               </p>
               <p className="fs-5 mb-5 parrafo-presentation">
                 Apasionada por aprender siempre nuevas cosas y usar la tecnologia para resolver problemas

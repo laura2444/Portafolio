@@ -24,18 +24,17 @@ const About: React.FC = () => {
             <div className="col-lg-10">
               {/* Texto normal sin tarjetas */}
               <p className="parrafo mb-5">
-                Hola! Soy estudiante de octavo semestre de Ingeniería de Sistemas en la Universidad San Buenaventura Cali,
-                 apasionada por el desarrollo de software y el aprendizaje constante. Cada interacción y experiencia es una
-                  oportunidad para inspirarme y descubrir cosas nuevas, por eso me gusta explorar tecnologías web y móviles
-                   como FastAPI, React, MongoDB, Flutter, Node.js y Angular. Me considero una persona tranquila, pero disfruto
-                    asumir retos y probar cosas diferentes. Soy curiosa, comprometida y siempre dispuesta a aprender y aportar 
-                      en cada proyecto..
+                ¡Hola! Soy Ingeniera de Sistemas, apasionada por la tecnología, el análisis de datos y el desarrollo de software. 
+                Me gusta aprender constantemente, explorar nuevas tecnologías y descubrir diferentes formas de crear soluciones a 
+                problemas reales. Me considero una persona tranquila, curiosa y comprometida. Disfruto asumir retos, probar 
+                diferentes cosas y aprender de cada proyecto y experiencia.
               </p>
 
               {/* Frase */}
               <blockquote className="mb-5">
-                “Siempre nos hemos definido por la capacidad de superar lo
-                imposible… apuntar más alto, alcanzar las estrellas.”
+                <p>“Siempre nos hemos definido por la capacidad de superar lo
+                imposible… apuntar más alto, alcanzar las estrellas.”</p>
+                
                 <footer className="blockquote-footer">Interstellar</footer>
               </blockquote>
 

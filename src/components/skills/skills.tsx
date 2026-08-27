@@ -2,6 +2,11 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../App.css";
 import "./skills.css";
+import powerbi from "../../assets/icons/powerbi.webp";
+import powerapps from "../../assets/icons/powerapps.webp";
+import powerAutomate from "../../assets/icons/powerautomate.svg";
+
+
 
 import {
   FaReact,
@@ -20,13 +25,13 @@ import {
   SiTypescript,
   SiMongodb,
   SiPostgresql,
-  SiExpress,
   SiPostman,
   SiAndroidstudio,
   SiGooglecolab,
   SiIntellijidea, 
   SiFlutter,
-  SiIonic
+  SiIonic,
+
 } from "react-icons/si";
 
 import { 
@@ -111,10 +116,7 @@ const Skills: React.FC = () => {
                     />
                     <small>FastAPI</small>
                   </div>
-                  <div className="col skill-item">
-                    <SiExpress size={40} color="#000000" />
-                    <small>Express</small>
-                  </div>
+                  
                   <div className="col skill-item">
                     <SiPostgresql size={40} color="#336791" />
                     <small>PostgreSQL</small>
@@ -193,6 +195,59 @@ const Skills: React.FC = () => {
                     <SiFlutter size={40} color="#02569B" />
                     <small>Flutter</small>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          {/* Backend */}
+          <div className="col-md-4">
+            <div className="card h-100 text-center">
+              <h5 className="card-header">Microsoft power platform</h5>
+              <div className="card-body">
+                <div className="row row-cols-3 g-3">
+                  <div className="col skill-item">
+                    <img
+                      src={powerbi}
+                      alt="Power BI"
+                      style={{
+                        width: "40px",
+                        height: "40px",
+                        objectFit: "contain",
+                      }}
+                    />
+                    <small>Power BI</small>
+                  </div>
+
+                  <div className="col skill-item">
+                    <img
+                      src={powerapps}
+                      alt="Power Apps"
+                      style={{
+                        width: "40px",
+                        height: "40px",
+                        objectFit: "contain",
+                      }}
+                    />
+                    <small>Power Apps</small>
+                  </div>
+
+                  <div className="col skill-item">
+                    <img
+                      src={powerAutomate}
+                      alt="Power Automate"
+                      style={{
+                        width: "40px",
+                        height: "40px",
+                        objectFit: "contain",
+                      }}
+                    />
+                    <small>Power Automate</small>
+                  </div>
+
+
+
                 </div>
               </div>
             </div>

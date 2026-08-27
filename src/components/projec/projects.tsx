@@ -86,7 +86,7 @@ const Projects: React.FC = () => {
     {
       image: "images/GUYP-arreglado.png",
       title: "GUYP: App para diagnóstico de plantas",
-      description: "Aplicación en desarrollo que usa visión por computadora para diagnosticar enfermedades en hojas de plantas a partir de imágenes. Genera respuestas para el usuario mediante un modelo de lenguaje.",
+      description: "Aplicación que usa visión por computadora para diagnosticar enfermedades en hojas de plantas a partir de imágenes. Genera respuestas para el usuario mediante un modelo de lenguaje.",
       technologies: [
         { Icon: SiFlutter, color: "#61DBFB", name: "Flutter" },
         { Icon: SiFastapi, color: "#68A063", name: "Fast Api" },
@@ -94,7 +94,7 @@ const Projects: React.FC = () => {
         { Icon: FaNetworkWired, color: "#000000", name: "Deep learning" },
         { Icon: FaRobot, color: "#7dc51eff", name: "API ia" }
       ],
-      inDevelopment: true
+      github: "https://github.com/laura2444/guyp_fastApiBack.git",
     },
     {
       image: "images/Miportafolio.png",
