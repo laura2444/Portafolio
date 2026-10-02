@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../../App.css";
 import "./projects.css";
@@ -13,6 +14,8 @@ import {
   FaBootstrap,
   FaNodeJs,
   FaReact,
+  FaPlay,
+  FaTimes,
 } from "react-icons/fa";
 import {
   SiTypescript,
@@ -39,11 +42,118 @@ interface Project {
   technologies: Technology[];
   github?: string;
   demo?: string;
+  video?: string;   // video local (se abre en el modal al hacer clic)
   inDevelopment?: boolean;
 }
 
+/* ---------- Modal del video ---------- */
+const VideoModal: React.FC<{ src: string; onClose: () => void }> = ({ src, onClose }) => {
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
+    document.addEventListener('keydown', onKey); // esto permite cerrar el modal con la tecla ESC
+    document.body.style.overflow = 'hidden'; //con eso no se puede hacer scroll mientras el modal está abierto
+    return () => {  // la funcion cleanup se ejecuta cuando el componente se desmonta, es decir, cuando el modal se cierra
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = '';
+    };
+  }, [onClose]); //este efecto depende de onClose, es decir, se ejecuta cada vez que onClose cambia, pero en este caso onClose no cambia, así que se ejecuta solo una vez al montar el componente
+
+  return createPortal( // esto DIBUJA el modal en el DOM, pero fuera del componente padre, es decir, en el body del documento, para que no se vea afectado por el CSS del componente padre
+    //si das click en el fondo se cierra el modal, pero si das click en el video no se cierra
+    <div className="video-modal-backdrop" onClick={onClose}>  
+      <div className="video-modal" onClick={(e) => e.stopPropagation()}> {/* stoppropagation esto evita que el click en el video cierre el modal */}
+        <button className="video-modal-close" onClick={onClose} aria-label="Cerrar video"><FaTimes /></button>
+        <video src={src} controls autoPlay playsInline />
+      </div>
+    </div>,
+    document.body
+  );
+};
+
+/* ---------- Card de proyecto ---------- */
+const ProjectCard: React.FC<{ project: Project; onPlayVideo: (src: string) => void }> = ({ project, onPlayVideo }) => {
+  return (
+    <div className="card card-one h-100 shadow-sm">
+      <div className="card-media">
+        <img src={project.image} alt={project.title} className="card-img-top" />
+
+        {project.video && (  //si hay video has esto
+          <>
+            <span className="demo-badge">▶ Demo en video</span>
+            <button
+              className="play-btn"
+              onClick={() => onPlayVideo(project.video!)}
+              aria-label={`Ver demo de ${project.title}`}
+            >
+              <FaPlay />
+            </button>
+          </>
+        )}
+      </div>
+
+      <div className="card-body">
+        <h5 className="card-title">{project.title}</h5>
+        <p className="card-text">{project.description}</p>
+
+        <div className="tech-icons-container">
+          {project.technologies.map((tech, idx) => {
+            const TechIcon = tech.Icon;
+            return (
+              <div key={idx} className="tech-icon-item">
+                <TechIcon size={30} color={tech.color} />
+                <span className="tech-icon-name">{tech.name}</span>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="d-flex gap-2">
+          {project.inDevelopment ? (
+            <span className="badge badge-dev">App en desarrollo</span>
+          ) : (
+            <>
+              {project.github && (
+                <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-outline-light btn-sm btn-icon">
+                  <FontAwesomeIcon icon={faGithub} size="2x" /> código
+                </a>
+              )}
+              {project.video && (
+                <button className="btn btn-primary btn-sm btn-icon" onClick={() => onPlayVideo(project.video!)}>
+                  <FaPlay size={11} /> ver demo
+                </button>
+              )}
+              {project.demo && (
+                <a href={project.demo} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm btn-icon">
+                  ver proyecto
+                </a>
+              )}
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+/* ---------- Sección principal ---------- */
 const Projects: React.FC = () => {
+  const [activeVideo, setActiveVideo] = useState<string | null>(null);
+
   const projects: Project[] = [
+    {
+      image: "images/GUYP-arreglado.png",
+      title: "GUYP: App para diagnóstico de plantas",
+      description: "Aplicación que usa visión por computadora para diagnosticar enfermedades en hojas de plantas a partir de imágenes. Genera respuestas para el usuario mediante un modelo de lenguaje.",
+      technologies: [
+        { Icon: SiFlutter, color: "#61DBFB", name: "Flutter" },
+        { Icon: SiFastapi, color: "#68A063", name: "Fast Api" },
+        { Icon: SiMongodb, color: "#47A248", name: "MongoDB" },
+        { Icon: FaNetworkWired, color: "#000000", name: "Deep learning" },
+        { Icon: FaRobot, color: "#7dc51eff", name: "API ia" }
+      ],
+      github: "https://github.com/laura2444/guyp_fastApiBack.git",
+      video: "videos/GUYP.mp4",   // 
+    },
     {
       image: "images/Hero.png",
       title: "HeroeVerso – Plataforma de Gestión de Superhéroes",
@@ -60,18 +170,6 @@ const Projects: React.FC = () => {
       demo: "https://angular-kaoz.onrender.com/home"
     },
     {
-      image: "images/request.png",
-      title: "Request – Automatización de requerimientos",
-      description: "Plataforma web que convierte descripciones de proyectos en HU, requerimientos, su clasificación y priorización usando inteligencia artificial. Utiliza modelos de lenguaje (LLM) para interpretar texto natural",
-      technologies: [
-        { Icon: FaPython, color: "#3776AB", name: "Python" },
-        { Icon: SiFlask, color: "#000000", name: "Flask" },
-        { Icon: FaRobot, color: "#F7DF1E", name: "API IA" }
-      ],
-      github: "https://github.com/laura2444/REQUESTWEB.git",
-      demo: "https://requestweb.onrender.com/"
-    },
-    {
       image: "images/productivity.png",
       title: "Productivity",
       description: "Aplicación web que usa inteligencia artificial para a partir de tus tareas, la IA las divide en pasos manejables. Actualmente en fase beta, con funciones básicas. Disponible para probar",
@@ -84,17 +182,16 @@ const Projects: React.FC = () => {
       demo: "https://laura2444.github.io/PresentationProductivity/"
     },
     {
-      image: "images/GUYP-arreglado.png",
-      title: "GUYP: App para diagnóstico de plantas",
-      description: "Aplicación que usa visión por computadora para diagnosticar enfermedades en hojas de plantas a partir de imágenes. Genera respuestas para el usuario mediante un modelo de lenguaje.",
+      image: "images/request.png",
+      title: "Request – Automatización de requerimientos",
+      description: "Plataforma web que convierte descripciones de proyectos en HU, requerimientos, su clasificación y priorización usando inteligencia artificial. Utiliza modelos de lenguaje (LLM) para interpretar texto natural",
       technologies: [
-        { Icon: SiFlutter, color: "#61DBFB", name: "Flutter" },
-        { Icon: SiFastapi, color: "#68A063", name: "Fast Api" },
-        { Icon: SiMongodb, color: "#47A248", name: "MongoDB" },
-        { Icon: FaNetworkWired, color: "#000000", name: "Deep learning" },
-        { Icon: FaRobot, color: "#7dc51eff", name: "API ia" }
+        { Icon: FaPython, color: "#3776AB", name: "Python" },
+        { Icon: SiFlask, color: "#000000", name: "Flask" },
+        { Icon: FaRobot, color: "#F7DF1E", name: "API IA" }
       ],
-      github: "https://github.com/laura2444/guyp_fastApiBack.git",
+      github: "https://github.com/laura2444/REQUESTWEB.git",
+      demo: "https://requestweb.onrender.com/"
     },
     {
       image: "images/Miportafolio.png",
@@ -108,51 +205,12 @@ const Projects: React.FC = () => {
     }
   ];
 
-  const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
-    <div className="card card-one h-100 shadow-sm">
-      <img src={project.image} alt={project.title} className="card-img-top" />
-      <div className="card-body">
-        <h5 className="card-title">{project.title}</h5>
-        <p className="card-text text-muteds">{project.description}</p>
-        <div className="tech-icons-container">
-          {project.technologies.map((tech, idx) => {
-            const TechIcon = tech.Icon;
-            return (
-              <div key={idx} className="tech-icon-item">
-                <TechIcon size={30} color={tech.color} />
-                <span className="tech-icon-name">{tech.name}</span>
-              </div>
-            );
-          })}
-        </div>
-        <div className="d-flex gap-2">
-          {project.inDevelopment ? (
-            <span className="badge badge-dev">App en desarrollo</span>
-          ) : (
-            <>
-              {project.github && (
-                <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-outline-light btn-sm">
-                  <FontAwesomeIcon icon={faGithub} size="2x" /> código
-                </a>
-              )}
-              {project.demo && (
-                <a href={project.demo} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">
-                  ver proyecto
-                </a>
-              )}
-            </>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-
   return (
     <div className="about-full-width">
       <section id="projects" className="section-spacing">
         <div className="container">
           <h2 className="text-center fw-bold mb-5 tituloabout">Proyectos</h2>
-          
+
           {/* Carrusel para Desktop */}
           <div id="projectsCarouselDesktop" className="carousel slide d-none d-lg-block">
             <div className="carousel-indicators">
@@ -165,7 +223,7 @@ const Projects: React.FC = () => {
                 <div className="row g-4">
                   {projects.slice(0, 3).map((project, idx) => (
                     <div key={idx} className="col-lg-4">
-                      <ProjectCard project={project} />
+                      <ProjectCard project={project} onPlayVideo={setActiveVideo} />
                     </div>
                   ))}
                 </div>
@@ -175,7 +233,7 @@ const Projects: React.FC = () => {
                 <div className="row g-4">
                   {projects.slice(3, 5).map((project, idx) => (
                     <div key={idx} className="col-lg-4">
-                      <ProjectCard project={project} />
+                      <ProjectCard project={project} onPlayVideo={setActiveVideo} />
                     </div>
                   ))}
                 </div>
@@ -213,7 +271,7 @@ const Projects: React.FC = () => {
                 <div key={idx} className={`carousel-item ${idx === 0 ? 'active' : ''}`}>
                   <div className="row g-4 justify-content-center">
                     <div className="col-12">
-                      <ProjectCard project={project} />
+                      <ProjectCard project={project} onPlayVideo={setActiveVideo} />
                     </div>
                   </div>
                 </div>
@@ -231,6 +289,10 @@ const Projects: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {activeVideo && (
+        <VideoModal src={activeVideo} onClose={() => setActiveVideo(null)} />
+      )}
     </div>
   );
 };
