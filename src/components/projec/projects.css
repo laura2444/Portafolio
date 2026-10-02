@@ -688,9 +688,8 @@ p.card-text.text-muted {
     transform: scale(1.1);
 }
 
-/* Color del texto de las cards (sin depender de text-muted de Bootstrap) */
 #projects .card-text {
-    color: #d7dfe9;   /* cámbialo a #ffffff si lo quieres blanco puro */
+    color: #d7dfe9;   
 }
 
 /* ===== Modal del video ===== */
