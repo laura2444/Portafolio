@@ -167,7 +167,7 @@ const Projects: React.FC = () => {
         { Icon: SiTypescript, color: "#3178C6", name: "TypeScript" }
       ],
       github: "https://github.com/Trekhi/Base_Datos2.git",
-      demo: "https://angular-kaoz.onrender.com/home"
+      demo: "https://angular-rouge-nine.vercel.app/home"
     },
     {
       image: "images/productivity.png",
