@@ -38,9 +38,9 @@ const Educacion: React.FC = () => {
                 alt="Educación"
               />
               <div className="card-img-overlay overlay-content" style={{ pointerEvents: 'none' }}>
-                <h5 className="card-title">Estudiante de ingeniería en Sistemas</h5>
+                <h5 className="card-title">Ingeniera de Sistemas</h5>
                 <p className="card-text">
-                  Universidad San buenaventura cali (2022 - 2026)
+                  Universidad San buenaventura cali (Febrero 2022 - Septiembre 2026)
                 </p>
               </div>
             </div>
