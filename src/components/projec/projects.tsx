@@ -170,6 +170,19 @@ const Projects: React.FC = () => {
       demo: "https://angular-rouge-nine.vercel.app/home"
     },
     {
+      image: "images/request.png",
+      title: "Request – Automatización de requerimientos",
+      description: "Plataforma web que convierte descripciones de proyectos en HU, requerimientos, su clasificación y priorización usando inteligencia artificial. Utiliza modelos de lenguaje (LLM) para interpretar texto natural",
+      technologies: [
+        { Icon: FaPython, color: "#3776AB", name: "Python" },
+        { Icon: SiFlask, color: "#000000", name: "Flask" },
+        { Icon: FaRobot, color: "#F7DF1E", name: "API IA" }
+      ],
+      github: "https://github.com/laura2444/REQUESTWEB.git",
+      demo: "https://laura142.pythonanywhere.com"
+      
+    },
+    {
       image: "images/productivity.png",
       title: "Productivity",
       description: "Aplicación web que usa inteligencia artificial para a partir de tus tareas, la IA las divide en pasos manejables. Actualmente en fase beta, con funciones básicas. Disponible para probar",
@@ -180,18 +193,6 @@ const Projects: React.FC = () => {
       ],
       github: "https://github.com/laura2444/productivity2.git",
       demo: "https://laura2444.github.io/PresentationProductivity/"
-    },
-    {
-      image: "images/request.png",
-      title: "Request – Automatización de requerimientos",
-      description: "Plataforma web que convierte descripciones de proyectos en HU, requerimientos, su clasificación y priorización usando inteligencia artificial. Utiliza modelos de lenguaje (LLM) para interpretar texto natural",
-      technologies: [
-        { Icon: FaPython, color: "#3776AB", name: "Python" },
-        { Icon: SiFlask, color: "#000000", name: "Flask" },
-        { Icon: FaRobot, color: "#F7DF1E", name: "API IA" }
-      ],
-      github: "https://github.com/laura2444/REQUESTWEB.git",
-      demo: "https://requestweb.onrender.com/"
     },
     {
       image: "images/Miportafolio.png",
