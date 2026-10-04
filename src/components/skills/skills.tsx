@@ -13,22 +13,20 @@ import {
   FaJsSquare,
   FaHtml5,
   FaCss3Alt,
-  FaBootstrap,
+  //FaBootstrap,
   FaNodeJs,
-  FaDocker,
   FaGitAlt,
-  FaFigma,
+  //FaFigma,
   FaPython,
-  FaJava,
+  //FaJava,
 } from "react-icons/fa";
 import {
   SiTypescript,
   SiMongodb,
-  SiPostgresql,
+  //SiPostgresql,
   SiPostman,
   SiAndroidstudio,
-  SiGooglecolab,
-  SiIntellijidea, 
+  //SiGooglecolab, 
   SiFlutter,
   SiIonic,
 
@@ -39,7 +37,7 @@ import {
   FaComments,        // Comunicación
   FaRegClock,        // Gestión del tiempo
   FaBrain,           // Pensamiento crítico
-  FaRegHeart         // Empatía
+  FaDatabase
 } from "react-icons/fa";
 
 import { SiAngular } from "react-icons/si";
@@ -78,17 +76,14 @@ const Skills: React.FC = () => {
                     <small>TypeScript</small>
                   </div>
                   <div className="col skill-item">
-                    <FaHtml5 size={40} color="#E34F26" />
+                    <FaHtml5 size={40} color="#E34C26" />
                     <small>HTML5</small>
                   </div>
                   <div className="col skill-item">
-                    <FaCss3Alt size={40} color="#1572B6" />
+                    <FaCss3Alt size={40} color="#2667C0" />
                     <small>CSS3</small>
                   </div>
-                  <div className="col skill-item">
-                    <FaBootstrap size={40} color="#7952B3" />
-                    <small>Bootstrap</small>
-                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -118,8 +113,8 @@ const Skills: React.FC = () => {
                   </div>
                   
                   <div className="col skill-item">
-                    <SiPostgresql size={40} color="#336791" />
-                    <small>PostgreSQL</small>
+                    <FaDatabase size={40} color="#afc6e4"/>
+                    <small>SQL</small>
                   </div>
                   <div className="col skill-item">
                     <SiMongodb size={40} color="#47A248" />
@@ -129,10 +124,7 @@ const Skills: React.FC = () => {
                     <FaPython size={40} color="#3776AB" />
                     <small>Python</small>
                   </div>
-                  <div className="col skill-item">
-                    <FaJava size={40} color="#ED8B00" />
-                    <small>Java</small>
-                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -148,34 +140,21 @@ const Skills: React.FC = () => {
                     <FaGitAlt size={40} color="#F05032" />
                     <small>Git</small>
                   </div>
-                  <div className="col skill-item">
-                    <FaDocker size={40} color="#2496ED" />
-                    <small>Docker</small>
-                  </div>
+                  
                   <div className="col skill-item">
                     <VscVscode size={40} color="#007ACC" />
                     <small>VS Code</small>
                   </div>
-                  <div className="col skill-item">
-                    <SiIntellijidea size={40} color="#0A65A9" />
-                    <small>IntelliJ IDEA</small>
-                  </div>
+                  
                   <div className="col skill-item">
                     <SiAndroidstudio size={40} color="#3DDC84" />
                     <small>Android Studio</small>
                   </div>
                   <div className="col skill-item">
-                    <SiGooglecolab size={40} color="#F9AB00" />
-                    <small>Google Colab</small>
-                  </div>
-                  <div className="col skill-item">
-                    <FaFigma size={40} color="#F24E1E" />
-                    <small>Figma</small>
-                  </div>
-                  <div className="col skill-item">
-                    <SiPostman size={40} color="#FF6C37" />
+                    <SiPostman size={40} color="#F24E1E" />
                     <small>Postman</small>
                   </div>
+                  
                 </div>
               </div>
             </div>
@@ -264,7 +243,7 @@ const Skills: React.FC = () => {
                   </div>
                   <div className="col skill-item">
                     <FaBrain size={40} color="#F9AB00" />
-                    <small>Pensamiento critico y analitico</small>
+                    <small>Pensamiento critico</small>
                   </div>
 
                   <div className="col skill-item">
@@ -275,11 +254,6 @@ const Skills: React.FC = () => {
                   <div className="col skill-item">
                     <FaRegClock size={40} color="#7952B3" />
                     <small>Gestión del tiempo</small>
-                  </div>
-
-                  <div className="col skill-item">
-                    <FaRegHeart size={40} color="#E34F26" />
-                    <small>Empatia</small>
                   </div>
                 </div>
               </div>
