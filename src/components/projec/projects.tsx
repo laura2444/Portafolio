@@ -185,7 +185,7 @@ const Projects: React.FC = () => {
     {
       image: "images/productivity.png",
       title: "Productivity",
-      description: "Aplicación web que usa inteligencia artificial para a partir de tus tareas, la IA las divide en pasos manejables. Actualmente en fase beta, con funciones básicas. Disponible para probar",
+      description: "Aplicación web en fase beta que busca facilitar la organización de tareas mediante inteligencia artificial, dividiéndolas en pasos manejables. Algunas funciones de IA se encuentran actualmente en desarrollo.",
       technologies: [
         { Icon: SiIonic, color: "#000000", name: "Ionic" },
         { Icon: SiTypescript, color: "#3178C6", name: "TypeScript" },
