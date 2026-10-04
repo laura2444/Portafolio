@@ -43,6 +43,9 @@ const Nav: React.FC = () => {
             <li className="nav-item me-4">
               <a className="nav-link" href="#about">Sobre mi</a>
             </li> 
+            <li className="nav-item me-4">
+              <a className="nav-link" href="#experience">Experiencia</a>
+            </li>
              <li className="nav-item me-4">
               <a className="nav-link" href="#projects">Proyectos</a>
             </li>
