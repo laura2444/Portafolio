@@ -8,6 +8,7 @@ import Skills from './components/skills/skills';
 import "./App.css";
 import Educacion from './components/educacion/educacion';
 import Logros from './components/logros/logros';
+import Experience from './components/experience/experience';
 
 
 const App: React.FC = () => {
@@ -16,6 +17,7 @@ const App: React.FC = () => {
       <Nav />
       <Presentation />
       <About />
+      <Experience />
       <Projects />
       <Skills />
       <Educacion />
